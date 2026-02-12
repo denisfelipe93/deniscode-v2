@@ -51,9 +51,9 @@ const cta = { label: "Começar", href: "#contato" };
            ========================================================= -->
       <header class="absolute left-0 right-0 top-0 z-10">
         <!-- faixa full-width -->
-        <div class="bg-white/10 backdrop-blur-md ring-1 ring-white/10">
+        <div class="bg-black/20 backdrop-blur-xl ring-1 ring-white/10 shadow-[0_10px_30px_-20px_rgba(0,0,0,0.8)]">
           <!-- container interno -->
-          <div class="mx-auto flex max-w-6xl items-center justify-between px-5 py-4">
+          <div class="mx-auto flex max-w-6xl items-center justify-between px-5 py-3">
             <!-- logo -->
             <a
               href="/"
@@ -79,25 +79,28 @@ const cta = { label: "Começar", href: "#contato" };
       </header>
 
       <!-- =========================================================
-           Bloco 6 — Conteúdo central (badge + título + subtítulo + 1 CTA)
-           ========================================================= -->
+     Bloco 6 — Conteúdo central (sem card, mockup-like)
+     ALTERE AQUI: posição (pb) e textos
+     ========================================================= -->
       <div class="relative mx-auto flex max-w-6xl px-5">
-        <div class="flex min-h-[80vh] w-full flex-col items-center justify-center pt-24 text-center md:min-h-[88vh] md:pt-28">
-
-          <!-- Título -->
-          <h1 class="max-w-4xl text-4xl font-extrabold tracking-tight text-white md:text-6xl">
+        <div
+          class="flex min-h-[80vh] w-full flex-col items-center justify-end pt-20 pb-14 text-center md:min-h-[88vh] md:pt-24 md:pb-24"
+        >
+          <h1
+            class="max-w-4xl text-4xl font-extrabold tracking-tight text-white drop-shadow-[0_14px_34px_rgba(0,0,0,0.75)] md:text-6xl"
+          >
             {{ title }}
           </h1>
 
-          <!-- Subtítulo -->
-          <p class="mt-5 max-w-2xl text-base leading-7 text-white/80 md:text-lg">
+          <p
+            class="mt-5 max-w-2xl text-base leading-7 text-white/85 drop-shadow-[0_10px_22px_rgba(0,0,0,0.65)] md:text-lg"
+          >
             {{ subtitle }}
           </p>
 
-          <!-- Botão único (mockup-like) -->
           <a
             :href="cta.href"
-            class="mt-8 inline-flex h-12 items-center justify-center rounded-full bg-sky-500 px-7 text-sm font-bold text-white shadow-[0_12px_28px_-14px_rgba(56,189,248,0.8)] transition hover:bg-sky-400 focus:outline-none focus:ring-2 focus:ring-sky-300 focus:ring-offset-2 focus:ring-offset-black"
+            class="mt-8 inline-flex h-12 items-center justify-center rounded-full bg-gradient-to-b from-sky-400 to-sky-600 px-10 text-sm font-bold text-white shadow-[0_20px_45px_-18px_rgba(56,189,248,0.9)] transition hover:from-sky-300 hover:to-sky-500 focus:outline-none focus:ring-2 focus:ring-sky-300 focus:ring-offset-2 focus:ring-offset-black"
           >
             {{ cta.label }} <span class="ml-2">→</span>
           </a>
