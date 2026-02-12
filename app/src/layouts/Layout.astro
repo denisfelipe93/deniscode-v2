@@ -1,0 +1,31 @@
+---
+/* =========================================================
+   Bloco 1 — Tailwind global (não mexer)
+   ========================================================= */
+import "../styles/global.css";
+
+/* =========================================================
+   Bloco 2 — Props (ALTERE AQUI título padrão)
+   ========================================================= */
+const { title = "DenisCode" } = Astro.props;
+---
+
+<!-- =========================================================
+     Bloco 3 — Base HTML (ALTERE AQUI meta/favicons depois)
+     ========================================================= -->
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+
+    <!-- Favicons (opcional, mantenha se tiver) -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" />
+  </head>
+
+  <body class="min-h-screen bg-white text-zinc-900">
+    <slot />
+  </body>
+</html>
