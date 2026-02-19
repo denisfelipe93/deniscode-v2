@@ -1,16 +1,26 @@
 ---
-/* =========================================================
-   Bloco 3.1 — Imports (ALTERE AQUI se mudar caminhos)
-   ========================================================= */
 import Layout from "../layouts/Layout.astro";
-import Hero from "../components/hero/Hero.vue";
+
+import Hero from "../components/sections/Hero.vue";
+import Proof from "../components/sections/Proof.vue";
+import Services from "../components/sections/Services.vue";
+import HowItWorks from "../components/sections/HowItWorks.vue";
+import Testimonials from "../components/sections/Testimonials.vue";
+import Contact from "../components/sections/Contact.vue";
+import Solutions from "../components/sections/Solutions.vue";
 ---
 
 <Layout title="DenisCode">
   <main>
-    <!-- =========================================================
-         Bloco 3.2 — Hero
-         ========================================================= -->
+    <!-- Hero precisa estar hidratado (toggle/menu) -->
     <Hero client:load />
+
+    <!-- As próximas podem ser carregadas quando ficarem visíveis (mais leve no mobile)--> 
+    <Proof client:visible />
+    <Solutions client:visible/>
+    <Services client:visible />
+    <HowItWorks client:visible />
+    <Testimonials client:visible />
+    <Contact client:visible />
   </main>
 </Layout>
